@@ -42,8 +42,8 @@ public class SeleniumDebitCardTest {
     public void FillingApplication() {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Петров Иван");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79090000000");
-        driver.findElement(By.className("checkbox__control")).click();
-        driver.findElement(By.className("button__content")).click();
+        driver.findElement(By.className("checkbox")).click();
+        driver.findElement(By.className("button")).click();
         var actualText = driver.findElement(By.cssSelector("[data-test-id=order-success")).getText().trim();
 
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actualText);
